@@ -1,0 +1,208 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Costo dei consumi",
+        "description": "Scegli il sensore di potenza (W) e la tariffa. Il costo viene calcolato anche sullo storico già registrato da Home Assistant.",
+        "data": {
+          "name": "Nome",
+          "power_entity": "Sensore di potenza",
+          "price_kwh": "Prezzo per kWh",
+          "fixed_monthly": "Quota fissa mensile"
+        },
+        "data_description": {
+          "power_entity": "Deve avere state_class measurement, così Home Assistant ne conserva le statistiche orarie.",
+          "fixed_monthly": "Ripartita sui giorni del mese: ogni giorno matura quota / giorni del mese."
+        }
+      }
+    },
+    "error": {
+      "entity_not_found": "Entità non trovata.",
+      "no_statistics": "Il sensore non ha state_class measurement: Home Assistant non ne registra le statistiche a lungo termine."
+    },
+    "abort": {
+      "already_configured": "Questo sensore è già configurato."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tariffa",
+        "description": "Tariffe attuali:\n{history}\n\nLa nuova tariffa vale dalla data scelta in poi e sostituisce quelle che iniziano da quella data o dopo.",
+        "data": {
+          "price_kwh": "Prezzo per kWh",
+          "fixed_monthly": "Quota fissa mensile",
+          "valid_from": "Valida dal",
+          "apply_to_all": "Applica a tutto lo storico"
+        },
+        "data_description": {
+          "fixed_monthly": "Ripartita sui giorni del mese: ogni giorno matura quota / giorni del mese.",
+          "apply_to_all": "Ignora la data e sostituisce tutte le tariffe (utile per correggere un errore)."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "cost_day": {
+        "name": "Costo oggi",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energia (kWh)"
+          },
+          "energy_cost": {
+            "name": "Costo energia"
+          },
+          "fixed_cost": {
+            "name": "Quota fissa"
+          },
+          "data_since": {
+            "name": "Dati dal"
+          },
+          "price_kwh": {
+            "name": "Prezzo per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Quota fissa mensile"
+          },
+          "projected_cost": {
+            "name": "Stima a fine periodo"
+          }
+        }
+      },
+      "cost_week": {
+        "name": "Costo settimana",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energia (kWh)"
+          },
+          "energy_cost": {
+            "name": "Costo energia"
+          },
+          "fixed_cost": {
+            "name": "Quota fissa"
+          },
+          "data_since": {
+            "name": "Dati dal"
+          },
+          "price_kwh": {
+            "name": "Prezzo per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Quota fissa mensile"
+          },
+          "projected_cost": {
+            "name": "Stima a fine periodo"
+          }
+        }
+      },
+      "cost_month": {
+        "name": "Costo mese",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energia (kWh)"
+          },
+          "energy_cost": {
+            "name": "Costo energia"
+          },
+          "fixed_cost": {
+            "name": "Quota fissa"
+          },
+          "data_since": {
+            "name": "Dati dal"
+          },
+          "price_kwh": {
+            "name": "Prezzo per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Quota fissa mensile"
+          },
+          "projected_cost": {
+            "name": "Stima a fine periodo"
+          }
+        }
+      },
+      "cost_quarter": {
+        "name": "Costo trimestre",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energia (kWh)"
+          },
+          "energy_cost": {
+            "name": "Costo energia"
+          },
+          "fixed_cost": {
+            "name": "Quota fissa"
+          },
+          "data_since": {
+            "name": "Dati dal"
+          },
+          "price_kwh": {
+            "name": "Prezzo per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Quota fissa mensile"
+          },
+          "projected_cost": {
+            "name": "Stima a fine periodo"
+          }
+        }
+      },
+      "cost_year": {
+        "name": "Costo anno",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energia (kWh)"
+          },
+          "energy_cost": {
+            "name": "Costo energia"
+          },
+          "fixed_cost": {
+            "name": "Quota fissa"
+          },
+          "data_since": {
+            "name": "Dati dal"
+          },
+          "price_kwh": {
+            "name": "Prezzo per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Quota fissa mensile"
+          },
+          "projected_cost": {
+            "name": "Stima a fine periodo"
+          }
+        }
+      },
+      "cost_total": {
+        "name": "Costo totale",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energia (kWh)"
+          },
+          "energy_cost": {
+            "name": "Costo energia"
+          },
+          "fixed_cost": {
+            "name": "Quota fissa"
+          },
+          "data_since": {
+            "name": "Dati dal"
+          },
+          "price_kwh": {
+            "name": "Prezzo per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Quota fissa mensile"
+          },
+          "projected_cost": {
+            "name": "Stima a fine periodo"
+          }
+        }
+      },
+      "energy_total": {
+        "name": "Energia totale"
+      }
+    }
+  }
+}

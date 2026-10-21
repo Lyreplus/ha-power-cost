@@ -1,0 +1,208 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Power cost",
+        "description": "Pick the power sensor (W) and the tariff. Cost is also computed over the history Home Assistant has already recorded.",
+        "data": {
+          "name": "Name",
+          "power_entity": "Power sensor",
+          "price_kwh": "Price per kWh",
+          "fixed_monthly": "Monthly fixed fee"
+        },
+        "data_description": {
+          "power_entity": "Must have state_class measurement so Home Assistant keeps its hourly statistics.",
+          "fixed_monthly": "Spread over the days of the month: each day accrues fee / days in month."
+        }
+      }
+    },
+    "error": {
+      "entity_not_found": "Entity not found.",
+      "no_statistics": "The sensor has no state_class measurement: Home Assistant does not record long-term statistics for it."
+    },
+    "abort": {
+      "already_configured": "This sensor is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tariff",
+        "description": "Current tariffs:\n{history}\n\nThe new tariff applies from the chosen date on and replaces tariffs starting on or after that date.",
+        "data": {
+          "price_kwh": "Price per kWh",
+          "fixed_monthly": "Monthly fixed fee",
+          "valid_from": "Valid from",
+          "apply_to_all": "Apply to all history"
+        },
+        "data_description": {
+          "fixed_monthly": "Spread over the days of the month: each day accrues fee / days in month.",
+          "apply_to_all": "Ignores the date and replaces every tariff (useful to fix a mistake)."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "cost_day": {
+        "name": "Cost today",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energy (kWh)"
+          },
+          "energy_cost": {
+            "name": "Energy cost"
+          },
+          "fixed_cost": {
+            "name": "Fixed fee"
+          },
+          "data_since": {
+            "name": "Data since"
+          },
+          "price_kwh": {
+            "name": "Price per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Monthly fixed fee"
+          },
+          "projected_cost": {
+            "name": "Projected end-of-period cost"
+          }
+        }
+      },
+      "cost_week": {
+        "name": "Cost this week",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energy (kWh)"
+          },
+          "energy_cost": {
+            "name": "Energy cost"
+          },
+          "fixed_cost": {
+            "name": "Fixed fee"
+          },
+          "data_since": {
+            "name": "Data since"
+          },
+          "price_kwh": {
+            "name": "Price per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Monthly fixed fee"
+          },
+          "projected_cost": {
+            "name": "Projected end-of-period cost"
+          }
+        }
+      },
+      "cost_month": {
+        "name": "Cost this month",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energy (kWh)"
+          },
+          "energy_cost": {
+            "name": "Energy cost"
+          },
+          "fixed_cost": {
+            "name": "Fixed fee"
+          },
+          "data_since": {
+            "name": "Data since"
+          },
+          "price_kwh": {
+            "name": "Price per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Monthly fixed fee"
+          },
+          "projected_cost": {
+            "name": "Projected end-of-period cost"
+          }
+        }
+      },
+      "cost_quarter": {
+        "name": "Cost this quarter",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energy (kWh)"
+          },
+          "energy_cost": {
+            "name": "Energy cost"
+          },
+          "fixed_cost": {
+            "name": "Fixed fee"
+          },
+          "data_since": {
+            "name": "Data since"
+          },
+          "price_kwh": {
+            "name": "Price per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Monthly fixed fee"
+          },
+          "projected_cost": {
+            "name": "Projected end-of-period cost"
+          }
+        }
+      },
+      "cost_year": {
+        "name": "Cost this year",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energy (kWh)"
+          },
+          "energy_cost": {
+            "name": "Energy cost"
+          },
+          "fixed_cost": {
+            "name": "Fixed fee"
+          },
+          "data_since": {
+            "name": "Data since"
+          },
+          "price_kwh": {
+            "name": "Price per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Monthly fixed fee"
+          },
+          "projected_cost": {
+            "name": "Projected end-of-period cost"
+          }
+        }
+      },
+      "cost_total": {
+        "name": "Total cost",
+        "state_attributes": {
+          "energy_kwh": {
+            "name": "Energy (kWh)"
+          },
+          "energy_cost": {
+            "name": "Energy cost"
+          },
+          "fixed_cost": {
+            "name": "Fixed fee"
+          },
+          "data_since": {
+            "name": "Data since"
+          },
+          "price_kwh": {
+            "name": "Price per kWh"
+          },
+          "fixed_monthly": {
+            "name": "Monthly fixed fee"
+          },
+          "projected_cost": {
+            "name": "Projected end-of-period cost"
+          }
+        }
+      },
+      "energy_total": {
+        "name": "Total energy"
+      }
+    }
+  }
+}

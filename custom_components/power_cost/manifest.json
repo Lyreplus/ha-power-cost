@@ -1,0 +1,13 @@
+{
+  "domain": "power_cost",
+  "name": "Power Cost",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/Lyreplus/ha-power-cost",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/Lyreplus/ha-power-cost/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

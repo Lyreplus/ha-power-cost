@@ -1,0 +1,13 @@
+{
+  "entity": {
+    "sensor": {
+      "cost_day": { "default": "mdi:cash" },
+      "cost_week": { "default": "mdi:cash" },
+      "cost_month": { "default": "mdi:cash-multiple" },
+      "cost_quarter": { "default": "mdi:cash-multiple" },
+      "cost_year": { "default": "mdi:cash-multiple" },
+      "cost_total": { "default": "mdi:cash-register" },
+      "energy_total": { "default": "mdi:lightning-bolt" }
+    }
+  }
+}
