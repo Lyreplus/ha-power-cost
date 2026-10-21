@@ -1,7 +1,7 @@
 {
   "domain": "power_cost",
   "name": "Power Cost",
-  "codeowners": [],
+  "codeowners": ["@Lyreplus"],
   "config_flow": true,
   "dependencies": ["recorder"],
   "documentation": "https://github.com/Lyreplus/ha-power-cost",
